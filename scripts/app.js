@@ -20,7 +20,6 @@ let currentCount = 10;
 let currentSort = 'Id';
 let sortOrder = 'asc';
 
-
 getData();
 
 const displayData = async (count, page) => {
@@ -160,6 +159,10 @@ prevPageBtn.addEventListener('click', () => {
 
 nextPageBtn.addEventListener('click', () => {
     currentPage++;
+    if (currentPage > 10)
+    {
+        currentPage = 1;
+    }
     displayData(currentCount, currentPage);
 });
 
