@@ -5,14 +5,68 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./src/output.css">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-
     <title>Doing Stuff With Data</title>
   </head>
+
+
   <body>
+
+    <div class="flex flex-col justify-center items-center bg-blue-400 rounded-3xl">
+      <div class="grid grid-cols-4 justify-self-center">
+
+        <h1 class="m-4 col-span-4 text-6xl text-center">Doing Stuff With Data</h1>
+        <h3 class="m-4 col-span-4 text-3xl text-center">Created by Bowen Henry</h3>
+
+        <div class="dropdown flex justify-self-center">
+          <button class="btn btn-secondary dropdown-toggle text-3xl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Display
+          </button>
+          <ul class="dropdown-menu">
+            <li class="bg-gray-400" id="display10"><a class="dropdown-item">10</a></li>
+            <li id="display20"><a class="dropdown-item">20</a></li>
+            <li class="bg-gray-400" id="display30"><a class="dropdown-item">30</a></li>
+            <li id="display40"><a class="dropdown-item">40</a></li>
+            <li class="bg-gray-400" id="display50"><a class="dropdown-item">50</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown flex justify-self-center">
+          <button id="sortByBtn" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sort By
+          </button>
+          <ul class="dropdown-menu">
+            <li class="bg-gray-400" id="sortByID"><a class="dropdown-item">ID</a></li>
+            <li id="sortByFirstName"><a class="dropdown-item bg-gray-500">First Name</a></li>
+            <li class="bg-gray-400" id="sortByLastName"><a class="dropdown-item">Last Name</a></li>
+            <li id="sortByHeight"><a class="dropdown-item">Height</a></li>
+            <li class="bg-gray-400" id="sortByAge"><a class="dropdown-item">Age</a></li>
+          </ul>
+        </div>
+
+        <div class="flex justify-self-center">
+          <button id="ascendingBtn" type="button" class="btn btn-success">Ascending</button>
+        </div>
+
+        
+        <div class="flex justify-self-center">
+          <button id="descendingBtn" type="button" class="btn btn-danger">Descending</button>
+        </div>
+
+        <div id="peopleList" class="m-4 col-span-4 text-3xl text-center grid grid-cols-5 h-[725px] overflow-y-scroll">
+            
+        </div>
+
+        <div id="pagination">
+          <button id="prevPageBtn" type="button" class="btn btn-danger">Previous</button>
+          <button id="nextPageBtn" type="button" class="btn btn-success">Next</button>
+      </div>
+
+      </div>
+
+
+    </div>
 
 
     <!-- bootstrap -->
